@@ -31,8 +31,7 @@ class Navbar extends Component {
                 to="/createboard"
                 activeClassName={Style.activenavigation}
                 className={Style.links}
-              >
-                Create a Board
+              >Create a Board
               </NavLink>
             </li>
 
