@@ -223,8 +223,10 @@ class Cards extends Component {
                 >
                   <i style={{ fontSize: "22px" }} class="fas fa-tasks"></i>
                   <div style={{ display: "flex", margin: "0px 3px" }}>
-                    {card[1].taskMembers.map(member => (
-                      <div className={Style.members}>{member.charAt(0)}</div>
+                    {card[1].taskMembers.map((member, i) => (
+                      <div key={i} className={Style.members}>
+                        {member.charAt(0)}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -429,8 +431,10 @@ class Cards extends Component {
                     margin: "15px 0px",
                   }}
                 >
-                  {this.state.cardDetailsMembers.map(member => (
-                    <div className={Style.membersboard}>{member.charAt(0)}</div>
+                  {this.state.cardDetailsMembers.map((member, i) => (
+                    <div key={i} className={Style.membersboard}>
+                      {member.charAt(0)}
+                    </div>
                   ))}
                 </div>
               </div>

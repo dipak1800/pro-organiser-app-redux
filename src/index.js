@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -12,9 +12,11 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 ReactDOM.render(
-  <Provider store={GlobalStore}>
-    <App />
-  </Provider>,
+  <StrictMode>
+    <Provider store={GlobalStore}>
+      <App />
+    </Provider>
+  </StrictMode>,
   document.getElementById("root")
 );
 
