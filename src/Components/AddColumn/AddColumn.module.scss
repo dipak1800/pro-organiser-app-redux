@@ -20,7 +20,10 @@
 .heading {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 600;
-  color: #f46036;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 form {
   // margin-top: ;

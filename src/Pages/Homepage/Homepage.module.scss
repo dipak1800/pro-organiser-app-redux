@@ -3,7 +3,10 @@
   height: 100%;
 }
 .Boards {
-  background-color: #f46036;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 20px;

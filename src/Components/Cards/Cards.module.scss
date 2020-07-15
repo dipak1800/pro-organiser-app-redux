@@ -64,7 +64,10 @@ select {
   }
 }
 .title {
-  color: #f46036;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .buttons {
   width: 100%;
@@ -143,7 +146,10 @@ button {
 }
 
 p {
-  color: #f46036;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 18px;
 }
 
@@ -154,9 +160,11 @@ p {
   justify-content: space-between;
 }
 .cardtitle {
-  color: #f46036;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 10px 10px;
-  text-transform: uppercase;
 }
 .handleButtons {
   width: 200px;
@@ -196,7 +204,10 @@ p {
   color: black;
 }
 .boardtype {
-  color: #f46036;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 10px 10px;
 
   display: inline;
@@ -211,7 +222,8 @@ p {
   margin-bottom: 10px;
 }
 .membersboard {
-  background-color: #f46036;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+
   text-transform: uppercase;
   width: 30px;
   color: whitesmoke;

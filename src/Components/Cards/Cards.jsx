@@ -56,7 +56,6 @@ class Cards extends Component {
   handleInsertCard = e => {
     e.preventDefault();
     let {
-      showModal,
       taskDescription,
       taskDueDate,
       taskMembers,
@@ -412,7 +411,7 @@ class Cards extends Component {
                   margin: "15px 0px",
                 }}
               >
-                <h3>Description</h3>
+                <h3 style={{ color: "#1b1464" }}>Description</h3>
                 <p>{this.state.cardDetailsDescription}</p>
               </div>
               <div
@@ -422,7 +421,7 @@ class Cards extends Component {
                   margin: "15px 0px",
                 }}
               >
-                <h3>Members</h3>
+                <h3 style={{ color: "#1b1464" }}>Members</h3>
                 <div
                   style={{
                     display: "flex",
@@ -442,7 +441,7 @@ class Cards extends Component {
                   margin: "15px 0px",
                 }}
               >
-                <h3>Due Date </h3>
+                <h3 style={{ color: "#1b1464" }}>Due Date </h3>
                 <p>{this.state.cardDetailsDueDate}</p>
               </div>
             </div>

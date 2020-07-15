@@ -40,7 +40,6 @@ class Navbar extends Component {
                 role="link"
                 className={Style.links}
                 to="/signup"
-                className={Style.links}
                 activeClassName={Style.activenavigation}
               >
                 Sign In{" "}

@@ -21,7 +21,10 @@
   margin: 20px auto;
   align-items: center;
   .boardTitle {
-    color: #f46036;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   button {
     padding: 7px 10px;

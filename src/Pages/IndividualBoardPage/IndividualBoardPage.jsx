@@ -5,7 +5,6 @@ import Style from "./IndividualBoardPage.module.scss";
 import BoardColumn from "../../Components/BoardColumn/BoardColumn";
 import swal from "sweetalert";
 import Loader from "react-loader-spinner";
-import { fetchData } from "../../Redux/Actions/Action Creators/HomepageActionsCreators/HomepageActionCreators";
 class IndividualBoardPage extends Component {
   state = {
     boardName: this.props.match.params.boardName,
@@ -38,6 +37,14 @@ class IndividualBoardPage extends Component {
   };
   HandleColumnDelete = columnId => {
     let { boardId } = this.state;
+    axios
+      .delete(
+        `https://redux-pro-organizer-app.firebaseio.com/BoardData/${boardId}/columnData/${columnId}.json`
+      )
+      .then(res => console.log(res.data))
+      .catch(err => {
+        alert("Something went wrong", err.message);
+      });
   };
   handleBoardDelete = e => {
     console.log("button clicked");
