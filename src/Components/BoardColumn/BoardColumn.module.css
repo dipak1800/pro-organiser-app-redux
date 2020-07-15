@@ -1,0 +1,44 @@
+.uppreroutercontainer {
+  width: 100%;
+  height: 100%;
+}
+
+.outercontainer {
+  background-color: #81ecec;
+  width: 300px;
+  min-height: 100px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+  border-radius: 6px;
+}
+
+.innercontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+i:hover {
+  color: #ff793f;
+}
+
+@media only screen and (max-width: 586px) {
+  .outercontainer {
+    margin: 10px 5px;
+  }
+}
+/*# sourceMappingURL=BoardColumn.module.css.map */

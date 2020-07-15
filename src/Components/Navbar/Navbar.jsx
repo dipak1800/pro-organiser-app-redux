@@ -7,9 +7,7 @@ class Navbar extends Component {
       <main>
         <nav role="navigation" className={Style.navbar}>
           <div className={Style.title}>
-            <h1 role="heading" aria-level="1">
-              Pro-Organizer
-            </h1>
+            <h1 aria-level="1">Pro-Organizer</h1>
           </div>
           <ul className={Style.lists}>
             <li className={Style.list1}>
@@ -31,7 +29,8 @@ class Navbar extends Component {
                 to="/createboard"
                 activeClassName={Style.activenavigation}
                 className={Style.links}
-              >Create a Board
+              >
+                Create a Board
               </NavLink>
             </li>
 

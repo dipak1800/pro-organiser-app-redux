@@ -8,6 +8,29 @@ import CreateBoardPage from "../src/Pages/CreateBoard Page/CreateBoardPage";
 import SignIn_SignUp_page from "../src/Pages/SignIn-SignUp-Page/SignIn_SignUp";
 import IndividualBoardPage from "./Pages/IndividualBoardPage/IndividualBoardPage";
 function App() {
+  // const [currentUser, setCurrentUser] = useState(null);
+  // let unSubscribeFromAuth = null;
+  // useEffect(() => {
+  //   unSubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+  //     // setCurrentUser(user);
+  //     // createUserProfileDocument(user);
+  //     // console.log(user);
+  //     if (userAuth) {
+  //       const userRef = await createUserProfileDocument(userAuth);
+  //       userRef.onSnapshot(snapShot => {
+  //         // console.log(snapShot.data());
+  //         setCurrentUser({ id: snapShot.id, ...snapShot.data() });
+  //       });
+  //     } else {
+  //       setCurrentUser(userAuth);
+  //     }
+  //   });
+  //   return () => {
+  //     console.log("it works as component will unmount.");
+  //     unSubscribeFromAuth(); //it will close the subscription
+  //   };
+  // }, []);
+  // console.log(currentUser);
   return (
     <>
       <Router>

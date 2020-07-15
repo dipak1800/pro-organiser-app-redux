@@ -2,11 +2,12 @@
   width: 90%;
   border: 2px solid black;
   margin: 10px auto;
-  background-color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 6px;
+  background-color: whitesmoke;
 }
 .addedcard {
   width: 90%;
@@ -38,16 +39,15 @@ form {
   align-items: flex-start;
   justify-content: space-between;
   label {
-    background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 10px 0px;
+    margin: 14px 10px;
+    color: #1b1464;
   }
   .formDiv {
     width: 100%;
     input {
-      width: 98%;
-      padding: 5px;
+      font-size: 14px;
+      width: 94%;
+      padding: 7px;
       border-radius: 5px;
       border: 2px solid gray;
       &:focus {
@@ -58,11 +58,13 @@ form {
   }
 }
 select {
-  width: 98%;
+  width: 94%;
+  option {
+    font-size: 16px;
+  }
 }
 .title {
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f46036;
 }
 .buttons {
   width: 100%;
@@ -141,18 +143,7 @@ button {
 }
 
 p {
-  background-image: linear-gradient(
-    to top,
-    #fcc5e4 0%,
-    #fda34b 15%,
-    #ff7882 35%,
-    #c8699e 52%,
-    #7046aa 71%,
-    #0c1db8 87%,
-    #020f75 100%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f46036;
   font-size: 18px;
 }
 
@@ -163,19 +154,9 @@ p {
   justify-content: space-between;
 }
 .cardtitle {
-  background-image: linear-gradient(
-    to top,
-    #fcc5e4 0%,
-    #fda34b 15%,
-    #ff7882 35%,
-    #c8699e 52%,
-    #7046aa 71%,
-    #0c1db8 87%,
-    #020f75 100%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f46036;
   margin: 10px 10px;
+  text-transform: uppercase;
 }
 .handleButtons {
   width: 200px;
@@ -215,18 +196,7 @@ p {
   color: black;
 }
 .boardtype {
-  background-image: linear-gradient(
-    to top,
-    #fcc5e4 0%,
-    #fda34b 15%,
-    #ff7882 35%,
-    #c8699e 52%,
-    #7046aa 71%,
-    #0c1db8 87%,
-    #020f75 100%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f46036;
   margin: 10px 10px;
 
   display: inline;
@@ -241,17 +211,7 @@ p {
   margin-bottom: 10px;
 }
 .membersboard {
-  background-image: linear-gradient(
-    to top,
-    #fcc5e4 0%,
-    #fda34b 15%,
-    #ff7882 35%,
-    #c8699e 52%,
-    #7046aa 71%,
-    #0c1db8 87%,
-    #020f75 100%
-  );
-
+  background-color: #f46036;
   text-transform: uppercase;
   width: 30px;
   color: whitesmoke;
@@ -280,9 +240,7 @@ p {
   form {
     margin-top: 5px;
     label {
-      background-color: red;
       margin: 6px 0px;
-      font-size: 3vw;
     }
   }
 }

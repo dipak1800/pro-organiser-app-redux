@@ -5,12 +5,13 @@
   flex-direction: column;
 
   .createboard {
-    background-color: #006494;
+    background-color: #f46036;
     margin: 10px 0px;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   form {
+    margin-top: 0;
     width: 100%;
     height: auto;
     display: flex;
@@ -19,7 +20,7 @@
     justify-content: space-between;
     label {
       color: #1b1464;
-      margin: 5px 0px;
+      margin: 20px 0px;
     }
     .formDiv {
       width: 100%;

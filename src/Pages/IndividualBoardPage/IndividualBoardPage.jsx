@@ -3,6 +3,9 @@ import AddColumn from "../../Components/AddColumn/AddColumn";
 import axios from "axios";
 import Style from "./IndividualBoardPage.module.scss";
 import BoardColumn from "../../Components/BoardColumn/BoardColumn";
+import swal from "sweetalert";
+import Loader from "react-loader-spinner";
+import { fetchData } from "../../Redux/Actions/Action Creators/HomepageActionsCreators/HomepageActionCreators";
 class IndividualBoardPage extends Component {
   state = {
     boardName: this.props.match.params.boardName,
@@ -23,7 +26,7 @@ class IndividualBoardPage extends Component {
         `https://redux-pro-organizer-app.firebaseio.com/BoardData/${this.state.boardId}/columnData.json`
       )
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           columnData: response.data,
           loading: false,
@@ -35,39 +38,55 @@ class IndividualBoardPage extends Component {
   };
   HandleColumnDelete = columnId => {
     let { boardId } = this.state;
-    axios
-      .delete(
-        `https://redux-pro-organizer-app.firebaseio.com/BoardData/${boardId}/columnData/${columnId}.json`
-      )
-      .then(res => console.log(res.data))
-      .catch(err => alert("something went wrong , " + err.message));
   };
   handleBoardDelete = e => {
+    console.log("button clicked");
     let { boardId } = this.state;
     let { history } = this.props;
-    axios
-      .delete(
-        `https://redux-pro-organizer-app.firebaseio.com/BoardData/${boardId}.json`
-      )
-      .then(res => {
-        history.push("/");
-      })
-      .catch(err => alert("something went wrong , " + err.message));
+    swal({
+      title: "Are you sure?",
+      text: `${this.state.boardName.toUpperCase()} card will be deleted`,
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then(willDelete => {
+      if (willDelete) {
+        return (
+          axios
+            .delete(
+              `https://redux-pro-organizer-app.firebaseio.com/BoardData/${boardId}.json`
+            )
+            .then(res => history.push("/"))
+            .catch(err => alert("something went wrong , " + err.message)),
+          swal(
+            `${this.state.boardName.toUpperCase()} card Deleted Succesfully`,
+            {
+              icon: "success",
+            }
+          )
+        );
+      } else {
+        swal(`${this.state.boardName.toUpperCase()} card not Deleted 😁!`);
+      }
+    });
   };
   render() {
     let { loading } = this.state;
     return (
       <div className={Style.mainContainer}>
         <div className={Style.myboard}>
-          <h4 className={Style.boardTitle}>
+          <h2 className={Style.boardTitle}>
             {this.state.boardName.toUpperCase()}
-          </h4>
+          </h2>
           <button className={Style.smallbtn} onClick={this.handleBoardDelete}>
             Delete Board
           </button>
         </div>
         {loading ? (
-          <h1>loading....</h1>
+          <h1 style={{ textAlign: "center" }}>
+            {" "}
+            <Loader type="Audio" color="#00BFFF" height={80} width={80} />
+          </h1>
         ) : (
           <div className={Style.container}>
             {this.state.columnData &&
@@ -78,7 +97,7 @@ class IndividualBoardPage extends Component {
                   columnId={column[0]}
                   // isCardDragged={isCardDragged}
                   handleColumnDelete={this.HandleColumnDelete}
-                  // boardId={boardId}
+                  boardId={this.state.boardId}
                   // setIsCardDragged={setIsCardDragged}
                 />
               ))}

@@ -2,6 +2,8 @@ import React, { Component, Fragment, useEffect } from "react";
 import Style from "./Homepage.module.scss";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 import { fetchData } from "../../Redux/Actions/Action Creators/HomepageActionsCreators/HomepageActionCreators";
 class Homepage extends Component {
   componentDidMount() {
@@ -12,7 +14,9 @@ class Homepage extends Component {
     return (
       <>
         {this.props.loading ? (
-          <h1>Loading...</h1>
+          <h1 style={{ textAlign: "center" }}>
+            <Loader type="Audio" color="#00BFFF" height={80} width={80} />
+          </h1>
         ) : (
           <div className={Style.Container}>
             <h2 className={Style.Boards}>Boards</h2>

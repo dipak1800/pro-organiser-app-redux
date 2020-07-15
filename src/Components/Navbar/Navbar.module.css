@@ -1,0 +1,98 @@
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #006494;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .title {
+  width: 72%;
+  margin-left: 10px;
+}
+
+.navbar .title h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+}
+
+.navbar .lists {
+  width: 28%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin-right: 10px;
+}
+
+.navbar .activenavigation {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 3px solid blue;
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+
+.navbar .links {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar .links:hover {
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 786px) {
+  ul li {
+    font-size: 2.2vw;
+  }
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .navbar {
+    height: 66px;
+  }
+  .activenavigation {
+    padding: 0px !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none !important;
+  }
+  .title h1 {
+    font-size: 3.7vw;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .title h1 {
+    font-size: 5vw;
+  }
+  ul li {
+    font-size: 3.2vw;
+  }
+}
+/*# sourceMappingURL=Navbar.module.css.map */

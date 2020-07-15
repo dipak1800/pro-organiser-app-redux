@@ -1,8 +1,11 @@
 import React from "react";
 // import { render } from "@testing-library/react";
 import CreateBoardPage from "./Pages/CreateBoard Page/CreateBoardPage";
+import Homepage from "./Pages/Homepage/Homepage";
 import App from "./App";
 import { mount } from "enzyme";
+import AddColumn from "./Components/AddColumn/AddColumn";
+import Cards from "./Components/Cards/Cards";
 
 describe("Navbar testing", () => {
   test("should have a home as well as createboard for navigating", () => {
@@ -38,3 +41,37 @@ describe("Create Board Page Testing", () => {
     expect(wrapper.find("#CreateBoard").text()).toEqual("Create");
   });
 });
+// describe("Add column Testing ", () => {
+//   it("should have input as column name with id column_name and type as text", () => {
+//     const wrapper = mount(<AddColumn />);
+//     console.log(wrapper.debug());
+//     expect(wrapper.find("input#column_name")).toHaveLength(1);
+//     expect(wrapper.find("#column_name").prop("type")).toEqual("text");
+//   });
+//   it("should have button as addColumn with id CreateColumn", () => {
+//     const wrapper = mount(<AddColumn />);
+//     expect(wrapper.find("#CreateColumn")).toHaveLength(1);
+//     expect(wrapper.find("#CreateColumn").text()).toBe("Add Column");
+//   });
+// });
+
+// describe("Add cardtesting ", () => {
+//   it("should have input as card title with id title  and type as text", () => {
+//     const wrapper = mount(<Cards />);
+//     console.log(wrapper.debug());
+//     expect(wrapper.find("input#title")).toHaveLength(1);
+//     expect(wrapper.find("#title").prop("type")).toEqual("text");
+//   });
+//   it("should have input as card description  with id description   and type as text", () => {
+//     const wrapper = mount(<Cards />);
+//     // console.log(wrapper.debug());
+//     expect(wrapper.find("input#description")).toHaveLength(1);
+//     expect(wrapper.find("#description").prop("type")).toEqual("text");
+//   });
+//   it("should have input as card title with id title  and type as text", () => {
+//     const wrapper = mount(<Cards />);
+//     // console.log(wrapper.debug());
+//     expect(wrapper.find("input#due_date")).toHaveLength(1);
+//     expect(wrapper.find("#due_date").prop("type")).toEqual("text");
+//   });
+// });

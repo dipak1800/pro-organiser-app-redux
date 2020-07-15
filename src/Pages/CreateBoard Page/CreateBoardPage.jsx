@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Style from "./CreateBoardPage.module.scss";
 import axios from "axios";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 class CreteBoardPage extends Component {
   state = {
     boardName: "",
@@ -29,7 +31,10 @@ class CreteBoardPage extends Component {
     return (
       <>
         {loading ? (
-          <h1 style={{ textAlign: "center" }}>Loading...</h1>
+          <h1 style={{ textAlign: "center" }}>
+            {" "}
+            <Loader type="Audio" color="#00BFFF" height={80} width={80} />
+          </h1>
         ) : (
           <div className={Style.board_container}>
             <h2 className={Style.createboard}>Create a Board</h2>

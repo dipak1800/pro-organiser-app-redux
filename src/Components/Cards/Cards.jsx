@@ -141,7 +141,7 @@ class Cards extends Component {
   };
   handleCardDetailsEdit = () => {
     this.setState({
-      showModal: false,
+      showModal: true,
       editCardDetails: true,
       showCardDetails: false,
     });
@@ -217,7 +217,7 @@ class Cards extends Component {
                     display: "flex",
                   }}
                 >
-                  <h5>{card[1].taskTitle}</h5>
+                  <h4>{card[1].taskTitle}</h4>
                 </div>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
@@ -232,20 +232,24 @@ class Cards extends Component {
               </div>
             </Fragment>
           ))}
-        <div onClick={this.handleAddCard} className={Style.cardelement}>
-          <h6 style={{ textAlign: "center" }}>Add a card</h6>
+        <div
+          onClick={this.handleAddCard}
+          id="AddACard"
+          className={Style.cardelement}
+        >
+          <h4 style={{ textAlign: "center" }}>Add a card</h4>
         </div>
         {this.state.showModal && (
           <Modal>
             {this.state.editCardDetails ? (
-              <h4 className={Style.title}>Edit Card Details</h4>
+              <h2 className={Style.title}>Edit Card Details</h2>
             ) : (
-              <h4 className={Style.title}>Add Card</h4>
+              <h2 className={Style.title}>Add Card</h2>
             )}
 
             <form onSubmit={this.handleInsertCard}>
               <label className="ml-3" htmlFor="task_title">
-                <h5>Enter a title for your task</h5>
+                <h3>Enter a title for your task</h3>
               </label>{" "}
               <div className={Style.formDiv}>
                 <input
@@ -267,9 +271,9 @@ class Cards extends Component {
                 />
               </div>
               <label className="ml-3" htmlFor="task_members">
-                <h5>
+                <h3>
                   Choose members for this task(select multiple ,if needed)
-                </h5>
+                </h3>
               </label>
               <div className={Style.formDiv}>
                 <select
@@ -301,7 +305,7 @@ class Cards extends Component {
                 </select>
               </div>
               <label className="ml-3" htmlFor="task_description">
-                <h5>Add the description for your task</h5>
+                <h3>Add the description for your task</h3>
               </label>{" "}
               <div className={Style.formDiv}>
                 <input
@@ -323,7 +327,7 @@ class Cards extends Component {
                 />
               </div>
               <label className="ml-3" htmlFor="task_due_date">
-                <h5>Select the due date for this task</h5>
+                <h3>Select the due date for this task</h3>
               </label>
               <div className={Style.formDiv}>
                 <input
@@ -357,7 +361,7 @@ class Cards extends Component {
                   className={Style.btn2}
                   id="closeCard"
                   onClick={() => {
-                    this.setstate({
+                    this.setState({
                       showModal: false,
                       editCardDetails: false,
                     });
@@ -374,9 +378,9 @@ class Cards extends Component {
             <div>
               <div className={Style.cardDetails}>
                 <div>
-                  <h4 className={Style.cardtitle}>
+                  <h2 className={Style.cardtitle}>
                     {this.state.cardDetailsTitle}
-                  </h4>
+                  </h2>
                 </div>
                 <div className={Style.handleButtons}>
                   <button
@@ -397,7 +401,7 @@ class Cards extends Component {
               </div>
               <div style={{ display: "flex" }}>
                 <span style={{ margin: "3px 10px", fontWeight: "600" }}>
-                  in<h6 className={Style.boardtype}>{this.state.boardName}</h6>
+                  in<h4 className={Style.boardtype}>{this.state.boardName}</h4>
                 </span>
               </div>
               <hr />
@@ -408,7 +412,7 @@ class Cards extends Component {
                   margin: "15px 0px",
                 }}
               >
-                <h5>Description</h5>
+                <h3>Description</h3>
                 <p>{this.state.cardDetailsDescription}</p>
               </div>
               <div
@@ -418,7 +422,7 @@ class Cards extends Component {
                   margin: "15px 0px",
                 }}
               >
-                <h5>Members</h5>
+                <h3>Members</h3>
                 <div
                   style={{
                     display: "flex",
@@ -438,7 +442,7 @@ class Cards extends Component {
                   margin: "15px 0px",
                 }}
               >
-                <h5>Due Date</h5>
+                <h3>Due Date </h3>
                 <p>{this.state.cardDetailsDueDate}</p>
               </div>
             </div>

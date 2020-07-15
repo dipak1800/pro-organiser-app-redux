@@ -1,0 +1,89 @@
+.Container {
+  width: 100%;
+  height: 100%;
+}
+
+.Boards {
+  background-color: #006494;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+
+.Noboards {
+  background-image: linear-gradient(-225deg, #473b7b 0%, #3584a7 51%, #30d2be 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: 10px 100px;
+}
+
+.Noboards::first-letter {
+  font-size: 28px;
+}
+
+.mainContainer {
+  margin-top: 30px;
+  width: 98%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  grid-row-gap: 30px;
+  margin: auto;
+}
+
+.mainContainer .board {
+  width: 300px;
+  height: 130px;
+  border: 0.3px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  color: #1b1464 !important;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.mainContainer .board:hover {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media only screen and (max-width: 786px) {
+  .mainContainer {
+    margin-top: 30px;
+    width: 98%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .board {
+    margin: 10px 0;
+  }
+}
+/*# sourceMappingURL=Homepage.module.css.map */

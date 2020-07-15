@@ -55,13 +55,25 @@ class Add_Column extends Component {
         {this.state.showModal && (
           <Modal>
             <div className={Style.addColumn}>
-              <h4 className={Style.heading}>Add a column</h4>
+              <h2 className={Style.heading}>Add a column</h2>
             </div>
             <div>
               <form onSubmit={this.handleAddColumnToFirebase}>
-                <label htmlFor="column_name">
-                  <h5>Enter a column name :</h5>
-                </label>{" "}
+                <label
+                  style={{
+                    backgroundImage: "none",
+
+                    height: "40px",
+                    color: "black",
+                    margin: "0px 6px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  htmlFor="column_name"
+                >
+                  <h3>Enter a column name :</h3>
+                </label>
                 <div className={Style.formDiv}>
                   <input
                     type="text"

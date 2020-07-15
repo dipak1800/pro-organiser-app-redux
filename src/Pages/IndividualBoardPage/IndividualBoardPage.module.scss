@@ -17,27 +17,36 @@
   display: flex;
   justify-content: space-between;
   width: 98%;
+  height: 60px;
   margin: 20px auto;
+  align-items: center;
   .boardTitle {
-    color: #1b1464;
+    color: #f46036;
   }
   button {
     padding: 7px 10px;
     border-radius: 5px;
     transition: all 1s ease;
     background-color: black;
-    text-align: center;
-    color: red;
+    display: flex;
+    justify-content: center;
+    color: #e01e37;
     font-size: 1rem;
-    border: 2px solid red !important;
+    border: 2px solid #e01e37 !important;
     cursor: pointer;
     &:hover {
-      background-color: red;
+      background-color: #e01e37;
       color: black;
       border: 2px solid black !important;
     }
   }
 }
+// .smallbtn {
+//   display: flex;
+//   align-items: center;
+//   width: 10%;
+//   padding: 9px 0px;
+// }
 @media only screen and (max-width: 786px) {
   .container {
     width: 100%;
@@ -47,4 +56,8 @@
     justify-content: center;
     align-items: center;
   }
+  // .smallbtn {
+  //   font-size: 3vw !important;
+  //   padding: 7px 7px !important;
+  // }
 }

@@ -1,0 +1,78 @@
+.board_container {
+  width: 96%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.board_container .createboard {
+  background-color: #006494;
+  margin: 10px 0px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.board_container form {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.board_container form label {
+  color: #1b1464;
+  margin: 5px 0px;
+}
+
+.board_container form .formDiv {
+  width: 100%;
+}
+
+.board_container form .formDiv input {
+  width: 98%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+.board_container form .formDiv input:focus {
+  border: 2px solid gray !important;
+  border-radius: 6px;
+}
+
+.board_container form button {
+  margin-top: 30px;
+  padding: 8px 24px;
+  border-radius: 5px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background-color: #1b1464;
+  text-align: center;
+  color: whitesmoke;
+  border: 2px solid whitesmoke !important;
+  cursor: pointer;
+}
+
+.board_container form button:hover {
+  color: #1b1464;
+  border: 2px solid #1b1464 !important;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+}
+/*# sourceMappingURL=CreateBoardPage.module.css.map */
